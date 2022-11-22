@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Website</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="{% static 'images/logo.png' %}"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="{% static 'index.html' %}">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>   
+            <h1>About Us</h1>
+    </section>
+    
+
+    
+<!------- about us content -------->
+    
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>We are the world's largest university</h1>     
+            <p>Safe.Welcoming.Multicultural.Vibrant.Eduford combines world-class education with competent tution fees and access to financial aid like bursaries and scholarships.At EDUFORD University, we attract the brightest minds from around the world. Consistently ranked in the world’s Top 100 in the 2023 Times Higher Education’s World University Rankings. Our standing puts us in the top 1 per cent of universities worldwide. Get all the information you need to know to be on your way to earning a world-class education.We take teaching and learning seriously, and it shows. Our vision and reputation for outstanding teaching is the reason the  Higher Education Academy awarded Eduford the 2018 Global Teaching Excellence Award. Teaching and research are our highest priorities and we work hard to establish a close relationship between the two at all levels. Our 998 faculty members, 97 per cent of whom have PhDs, are first in their class and come from 55 countries. It’s all part of our mission to discover, share and preserve knowledge with a commitment to creativity, excellence and innovation in teaching.We are committed to creating a welcoming and supportive learning environment. For every step on your journey, from COVID-19 information, to advice on immigration to tutoring and career support, we’re here to help.
+
+            </p>
+            <a href="" class="hero-btn red-btn">EXPOLER NOW</a>
+        </div>
+        <div class="about-col">
+            <img src="{% static 'images/about.jpg' %}">
+        </div>
+    </div>    
+</section>
+    
+<!-------- footer ---------->
+
+<section class="footer">
+        <h4>About Us</h4>
+        <p>At Eduford University, we attract the brightest minds from around the world. Our standing puts us in the top 1 per cent of universities worldwide.<br>
+            START YOUR JOURNEY<br>
+            Our student recruitment team is waiting to hear from you.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+     <i class="fa fa-heart-o"></i> 
+</section>    
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+    
+</body>
+</html>    

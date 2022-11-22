@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 
-def index(request):
+def contactform(request):
     if request.method == 'POST':
         name = request.POST.get('full-name')
         email = request.POST.get('email')
@@ -20,6 +20,14 @@ def index(request):
         send_mail(subject, message, email_from, org_mail)
         send_mail(subject_user, message_user, email_from, recipient_list)
         # third param is the email address we send mail from , leaveblank (optional) ''
-        return HttpResponse('Thank you for subnmitting the from, check email for confirmation')
+        return HttpResponse('Thank you for submmitting the form, check email for confirmation')
 
-    return render(request, 'contactform/index.html', {})
+    return render(request, 'contact.html')
+
+def homepage(request):
+    if request.method == 'GET':
+        return render(request, 'index.html' )
+
+def blog(request):
+    if request.method == 'GET':
+        return render(request, 'blog.html' )

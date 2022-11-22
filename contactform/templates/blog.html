@@ -1,0 +1,130 @@
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Website Design</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="{% static 'images/logo.png' %}"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+            <h1>Our Certificate & Programs</h1>
+    </section>
+    
+<!---------- Blog Page Content ---------->
+    
+    <section class="blog-content">
+    <div class="row">
+    <div class="blog-left">
+        <img src="{% static 'images/certificate.jpg' %}">
+        <h2>Our Certificate & Programs</h2>
+        
+        <p>The Arts & Science Program stresses active, self-directed,  and cooperative learning, with emphasis on social awareness and the development of a wide range of transferable skills.
+
+            The Program is unique in offering an extensive integrated core curriculum, which bridges the divide between the arts and the sciences and also between academic study and social engagement. The majority of its graduates go on to graduate or professional schools in a wide variety of fields.</p>
+        <br>
+        <p>The Bachelor of Technology (BTech) program positions you to be at the forefront of change in engineering industries. With a unique blend of theory and practice, students spend more than 750 hours in lab settings applying engineering principles to develop innovative technical solutions. Guided by industry advisory committees and taught by professors with relevant experience, each of the three BTech programs is geared to tackle technological change head-on.With 25 per cent of the curriculum devoted to business and management courses, graduates are uniquely positioned to take on leadership roles and contribute to the success of an organization.</p>
+        <br>
+        <p>With an emphasis on greater collaboration across faculties, minoring in sustainability, and fostering a greater sense of community, the university will best prepare you for a future in an ever-evolving world of business. All students will receive exposure to accounting, finance, human resource management, information systems, marketing, strategic management and operations management.</p>
+        <br>
+        <p>In our Humanities disciplines, we focus on developing persuasive and rational arguments, communicating complex and challenging ideas, collaboration, creativity, and critical and constructive thinking. We help you to develop the skills to prepare for a career as an active and engaged global citizen.Applied Humanities, independent study and internship courses allow students to gain real-world experience through the practical application of classroom learning.The Humanities Internship Program provides undergraduate students with the opportunity to develop employability skills, explore career options and integrate their academic learning in a professional setting through a meaningful work experience. This experience includes paid full-time and part-time work opportunities related to their career area of study.
+
+
+        </p>
+        
+        <div class="comment-box">
+            <h3>Leave a comment</h3>
+            <form class="comment-form">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter email">
+                    <textarea rows="5" placeholder="Your Comment"></textarea>
+                    <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+            </form>
+        </div>
+    </div>
+        
+    <div class="blog-right">
+        
+        
+            <h3>Post Categories</h3>
+            <div>
+                <span>Business Analytics</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>Data Science</span>
+                <span>28</span>
+            </div>
+            <div>
+                <span>Machine Learning</span>
+                <span>15</span>
+            </div>
+            <div>
+                <span>Computer Science</span>
+                <span>34</span>
+            </div>
+            <div>
+                <span>AutoCAD</span>
+                <span>42</span>
+            </div>
+            <div>
+                <span>Journalism</span>
+                <span>22</span>
+            </div>
+            <div>
+                <span>Commerce</span>
+                <span>13</span>
+            </div>
+           
+        </div> 
+    
+    </div>
+    </section>
+    
+<!-------- footer ---------->
+
+<section class="footer">
+        <h4>About Us</h4>
+        <p>At Eduford University, we attract the brightest minds from around the world. Our standing puts us in the top 1 per cent of universities worldwide.<br>
+            START YOUR JOURNEY<br>
+            Our student recruitment team is waiting to hear from you.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+     <i class="fa fa-heart-o"></i>
+</section>    
+  
+  
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+    
+</body>
+</html>    
