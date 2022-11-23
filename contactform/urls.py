@@ -21,5 +21,8 @@ urlpatterns = [
     path('contact/', contactform, name='conatct'),
     path('admin/', admin.site.urls),
     path('', homepage, name='homepage'),
-    path('blog/', blog, name='blog')
+    path('blog/',blog , name='blog'),
+    path('courses/', courses, name='courses'),
+    path('about/', about, name='about'),
+    path('contact/', contact, name='contact'),
 ]

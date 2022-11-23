@@ -25,9 +25,13 @@ def contactform(request):
     return render(request, 'contact.html')
 
 def homepage(request):
-    if request.method == 'GET':
-        return render(request, 'index.html' )
+    return render(request, 'index.html' )
 
 def blog(request):
-    if request.method == 'GET':
         return render(request, 'blog.html' )
+def courses(request):
+    return render(request,'course.html')
+def about(request):
+    return render(request,'about.html')
+def contact(request):
+    return render(request,'contact.html')
