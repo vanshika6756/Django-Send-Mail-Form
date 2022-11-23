@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>University Website Design</title>
+<title>University Website</title>
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -27,7 +27,7 @@
     </section>
     
     
-<!------- Contact Us ------->
+{% comment %} <!------- Contact Us -------> {% endcomment %}
 
     
     <section class="location">
@@ -59,7 +59,7 @@
                         </span>
                     </div>
                 </div>
-                <!-- <div class="contact-col">
+                {% comment %} <!-- <div class="contact-col">
                     <form method="post" action="contact-form-handler.php">
                     <input type="text" name="name" placeholder="Enter your name" required>
                     <input type="email" name="email" placeholder="Enter email address" required>
@@ -67,28 +67,29 @@
                     <textarea rows="8" name="message" placeholder="Message" required></textarea>
                     <button type="submit" class="hero-btn red-btn">Send Message</button>
                     </form> 
-                </div> -->
+                </div> --> {% endcomment %}
                 <div class="contact-col">
                     <form action="" class="contact-form" method="POST">
                         {% csrf_token %}
                         <div class="form-control">
-                            <div class="tag">Full Name</div>
-                            <input type="text" name="full-name" id="">
+                            {% comment %} <div class="tag">Full Name</div> {% endcomment %}
+                            <input type="text" name="full-name" id="" placeholder="Enter your name" required>
                         </div>
                         <div class="form-control">
-                            <div class="tag">Email</div>
-                            <input type="text" name="email" id="">
+                            {% comment %} <div class="tag">Email</div> {% endcomment %}
+                            <input type="text" name="email" id="" placeholder="Enter email address" required>
                         </div>
                         <div class="form-control">
-                            <div class="tag">Subject</div>
-                            <input type="text" name="subject" id="">
+                            {% comment %} <div class="tag">Subject</div> {% endcomment %}
+                            <input type="text" name="subject" id="" placeholder="Enter your subject" required>
                         </div>
                         <div class="form-control">
-                            <div class="tag">Message</div>
-                            <textarea name="message"  cols="30" rows="10"></textarea>
+                            {% comment %} <div class="tag">Message</div> {% endcomment %}
+                            <textarea name="message"  cols="30" rows="10" placeholder="Message" required></textarea>
                         </div>
                         <div class="form-control">
-                            <input type="submit" class="btn submit-btn" name="" value="Send Message"></div>
+                            {% comment %} <input type="submit" class="btn submit-btn" name="" value="Send Message"></div> {% endcomment %}
+                            <input type="submit" class="hero-btn red-btn" name="" value="Send Message"></div> 
                     </form>
                 </div>
             </div>

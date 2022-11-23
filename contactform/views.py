@@ -17,6 +17,7 @@ def contactform(request):
         message_user = f"Hello {name}, Your concern has been recieved."
         recipient_list = [email]
 
+        
         send_mail(subject, message, email_from, org_mail)
         send_mail(subject_user, message_user, email_from, recipient_list)
         # third param is the email address we send mail from , leaveblank (optional) ''
